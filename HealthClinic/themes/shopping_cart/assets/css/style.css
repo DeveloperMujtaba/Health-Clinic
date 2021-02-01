@@ -1,0 +1,276 @@
+img{border: 0; margin: 0; padding: 0}
+select{text-transform: uppercase!important}
+.clear{ clear: both}
+.required{ color: #ff0000; font-size: 13px}
+.form-group {margin-bottom: 7px;}
+#same_date_box{display: none}
+#ticketNumBox, #errorGenericBox, #errorTicketMore, #speedingInfo, #cit_other, #acc_injBox, #messajeLateDays,
+#inj_row_error, #cit_error, #speed_error, #error_Toll_violations, #error_careless_driving, #error_Open_container_and_passenger_moving,
+#doubt_row{display: none}
+.formBox{text-align: center;}
+.form-horizontal{border:0; padding: 20px 20px 20px 20px;}
+
+.formBox {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/*  ticket  */
+.tickectItemBox_title{padding: 2px; border: 1px solid #D9DDE3; border-top: 1px solid #DADADA; border-bottom: 1px solid #CCCCCC; color: #99A3BB; font-size: 12px; font-weight: bold; background: #EEEEEE}
+.tickectItemBox_title_current{padding: 5px; border: 1px solid #333; color: #fff; font-size: 12px; font-weight: bold; background: #000}
+.tickectItemBox_content{padding: 10px; border: 1px solid #333; border-top: 0;}
+.ticketN{color: #ff0000}
+
+/*  Confirmation    */
+.confTitleBox{background: #A70D0D; padding: 0px 0 0 5px; line-height: 20px; color: #fff; font-size: 13px; font-weight: bold}
+.confContentBox{border: 1px solid #A70D0D; border-top: 0; padding: 10px 10px 0px 10px; margin-bottom: 15px}
+.confTitleBox_int{background: #ccc; padding: 0px 0 0 5px; line-height: 20px; color: #000; font-size: 13px; font-weight: bold}
+.confContentBox_int{background: #E0E0E0;}
+.table tr td{width: 48%!important; padding: 0 1% 0 1%!important; text-align: right; font-size: 11px; font-weight: bold; font-family: arial}
+.table tr td+td{width: 50%!important; text-align: left; font-weight: normal; font-size: 12px;}
+
+.confContentBox_int table tr td{border: 1px solid #fff!important}
+.confEdit{float: right; width: 100px; background: #E3B500; text-align: center; color: #000; text-decoration: none; font-weight: bold}
+.confEdit_int{float: right; width: 100px; background: #969696; text-align: center; color: #fff; text-decoration: none; font-weight: bold}
+
+#cit_agree label{ font-weight: normal!important; font-size: 12px}
+#cit_agree_additional label{ font-weight: normal!important; font-size: 12px}
+
+/*  MESSAGE     */
+.notify{background-color: #333; color: #FFF; width: 250px; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;}
+.notify p{padding: 10px; margin: 0;}
+.notify.error{background-color: #F00;}
+#divActualizarContrato_Success{display: none}
+.imgStep{height: 55px;}
+.btnBox{margin: 40px 0 0; text-align: center;}
+
+.h1 {
+font-family: Arial, Helvetica, sans-serif!important;
+font-size: 24px!important;
+line-height: 22px!important;
+font-weight: bold!important;
+color: #e7b300!important;
+text-decoration: none!important;
+padding: 10px 0 0 30px!important;
+}
+.columncontent{float: left; width: 690px;}
+.contentbanner{padding: 10px 0 0 10px}
+.form-group {margin-bottom: 5px!important;}
+.input-sm, .form-horizontal .form-group-sm .form-control {
+height: 25px!important;padding: 2px 10px!important;font-size: 12px;line-height: 1.5;border-radius: 3px;}
+
+
+.form-wrapper label .slider__option {
+    color: #fff;
+}
+.form-wrapper label:hover .slider__option {
+    color: #ffe202;
+
+}
+
+.slider__option {
+    color: #fff;
+    text-decoration: none;
+}
+.slider__option:hover {
+    color: #ffe202;
+    text-decoration: none;
+}
+
+.tooltip-ttc-container {
+    position: relative;
+    padding-right: 0px;
+}
+
+.tooltip-ttc-container .control-label {
+   width: 100%; 
+   cursor: pointer;
+   background: url(../img/help-bubble.png) no-repeat 100% center;
+   padding-right: 20px;
+}
+
+
+.tooltip-ttc {
+  top:30px;
+  right: 0;
+  background-color:black;
+  color:white;
+  border-radius:5px;
+  display:none;
+  position:absolute;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition:  opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition:  opacity 0.5s;
+  transition:  opacity 0.5s;
+  z-index: 10;
+  padding: 22px 10px 10px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  z-index: 999;
+}
+
+.tooltip-ttc span {
+    display:block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    text-indent: -9999px;
+    background: url(../img/cancel.png) no-repeat 50% 50%;
+}
+
+label.control-label:hover + div.tooltip-ttc {
+   /*opacity:1;*/
+}
+
+.form__next__custom {
+    padding: 0 !important;
+}
+
+.custom__input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 15px;
+    background: rgba(255,255,255,0.2);
+    outline: none;
+}
+
+.custom__button {
+    display: block;
+    margin: 20px auto;
+    background: rgba(0,0,0,0.5);
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+
+
+.overlay__demo {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+  display: none;
+}
+.overlay__documento {
+  position: absolute;
+  display: block;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+  .overlay__documento h3 {
+    text-align: center;
+    color: #fff;
+    margin: 10px 0;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .home__activities__item {
+    text-align: center;
+  }
+
+  .overlay__documento__cerrar {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+  }
+
+  .overlay__documento__imagen {
+    display: initial !important;
+  }
+
+  .overlay__documento__contenido .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .overlay__documento__contenido .slick-dots li {
+    border:none;
+    border-radius: 50%;
+    margin: 0 5px;
+    width: 18px;
+    padding: 0;
+    height: 18px;
+    position: relative;
+    background: #ffffff;
+    list-style-type: none;
+
+  }
+
+  .overlay__documento__contenido .slick-dots li button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-size: 1px;
+    width: 18px;
+    padding: 0;
+    height: 18px;
+  }
+
+  .overlay__documento__contenido .slick-dots li.slick-active button {
+    display: block;
+    background-color: #f7db00;
+    color: #f7db00;
+    border-radius: 50%;
+    outline: none;
+  }
+  
+  .overlay_demo_link {
+        font-weight: bold;
+        text-decoration: underline;
+        background: url(../img/help-bubble.png) no-repeat 100% center;
+   padding-right: 20px;
+      }
+      
+      .overlay__derecha {
+        position: fixed;
+        top: 50%;
+        right: 10%;
+      }
+
+      .overlay__izquierda {
+        position: fixed;
+        top: 50%;
+        left: 10%;
+      }
+
+.form__button__group {
+ display: flex;
+}
+
+.slider-form .button {
+ margin-left: 10px;
+ font-size: 18px;
+}
+
+.slider-form .button:first-child {
+ margin-left: 0;
+}
+
+@media screen and (max-width: 766px) {
+ .form__button__group {
+   flex-wrap: wrap;
+ }
+
+ .slider-form .button {
+   margin-left: 0;
+   margin: 20px auto 0 auto;
+ }
+
+}
