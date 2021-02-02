@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -167,9 +169,15 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="contactform.cs">
+      <DependentUpon>ModelMain.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="fleetservices.cs">
+      <DependentUpon>ModelMain.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,7 +186,24 @@
       <DependentUpon>202102011751338_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelMain.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMain.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelMain.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMain.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMain.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\contact_form.cs" />
+    <Compile Include="Models\driverfleet.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,6 +219,16 @@
     <Content Include="index.html" />
     <Content Include="location.html" />
     <Content Include="login.html" />
+    <Content Include="ModelMain.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMain.edmx</DependentUpon>
+      <LastGenOutput>ModelMain.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelMain.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMain.edmx</DependentUpon>
+      <LastGenOutput>ModelMain.cs</LastGenOutput>
+    </Content>
     <Content Include="privacy-policy.html" />
     <Content Include="professional-drivers-fleet-services-division.html" />
     <Content Include="professional-drivers-fleet.html" />
@@ -2284,6 +2319,20 @@
     <Content Include="services\speeding-ticket-lawyer.html" />
     <Content Include="services\suspended-license.html" />
     <Content Include="services\texting-driving.html" />
+    <Content Include="themes\login\Content\Login\css\style.css" />
+    <Content Include="themes\login\Content\Login\images\dott.png" />
+    <Content Include="themes\login\Content\Login\images\e-mail.png" />
+    <Content Include="themes\login\Content\Login\images\password.png" />
+    <Content Include="themes\login\Content\Login\images\send1.png" />
+    <Content Include="themes\login\Content\Login\images\slider-form-bg.jpg" />
+    <Content Include="themes\login\Content\Login\images\tick.png" />
+    <Content Include="themes\login\Content\Login\images\user.html" />
+    <Content Include="themes\login\images\logo.png" />
+    <Content Include="themes\login\Login\ForgotPassword.html" />
+    <Content Include="themes\login\Login\Index.html" />
+    <Content Include="themes\login\Scripts\jquery-1.12.3.js" />
+    <Content Include="themes\login\Scripts\jquery.validate.js" />
+    <Content Include="themes\login\Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="themes\shopping_cart\assets\css\style.css" />
     <Content Include="themes\shopping_cart\assets\img\arrow-point-to-left.png" />
     <Content Include="themes\shopping_cart\assets\img\arrow-point-to-right.png" />
@@ -2925,6 +2974,13 @@
     <Content Include="themes\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="themes\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="themes\fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="ModelMain.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelMain.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelMain.edmx.diagram">
+      <DependentUpon>ModelMain.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="blog\10-reasons-hire-lawyer-get-dui\feed" />
     <Content Include="blog\10-reasons-hiring-a-traffic-ticket-lawyer-is-beneficial\feed" />
@@ -4065,11 +4121,15 @@
     <Content Include="wp-content\themes\the-ticket-clinic\fonts\roboto\Roboto-Regular-webfont.ttf" />
     <Content Include="wp-content\themes\the-ticket-clinic\fonts\roboto\Roboto-Regular-webfont.woff" />
     <Content Include="wp-content\themes\the-ticket-clinic\fonts\roboto\Roboto-Regular-webfontd41d.eot" />
+    <Content Include="Views\Home\Messg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202102011751338_InitialCreate.resx">
       <DependentUpon>202102011751338_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
