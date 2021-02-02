@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Messg";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    string msg = (string)ViewBag.Message;
+    }
+<div style="padding:200px">
+    <h2 style="padding:20px; text-align:center">@msg.Split('~')[0]</h2>
+</div>
+<script>
+    var loc = "@msg.Split('~')[1]";
+    setTimeout(function () { window.location.href = loc; }, 2000);
+</script>

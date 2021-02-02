@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="healthclinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="contactform">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="fax" Type="nvarchar" MaxLength="20" />
+          <Property Name="dlicense" Type="nvarchar" MaxLength="10" />
+          <Property Name="tickethelp" Type="nvarchar" MaxLength="50" />
+          <Property Name="citationno" Type="nvarchar" MaxLength="100" />
+          <Property Name="citationdate" Type="datetime" />
+          <Property Name="complydate" Type="datetime" />
+          <Property Name="conticket" Type="nvarchar" MaxLength="200" />
+          <Property Name="vcnumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="city" Type="nvarchar" MaxLength="100" />
+          <Property Name="info" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="fleetservices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="doyouearn" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="cdllicense" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tt6" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="recommend" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ywhynot" Type="nvarchar" MaxLength="500" />
+          <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="addr" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="addr1" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="city" Type="nvarchar" MaxLength="100" />
+          <Property Name="_state" Type="nvarchar" MaxLength="100" />
+          <Property Name="zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="company" Type="nvarchar" MaxLength="100" />
+          <Property Name="noofdrivers" Type="int" />
+          <Property Name="addfb" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="healthclinicModelStoreContainer">
+          <EntitySet Name="contactform" EntityType="Self.contactform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fleetservices" EntityType="Self.fleetservices" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="healthclinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="contactform">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="dlicense" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="tickethelp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="citationno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="citationdate" Type="DateTime" Precision="3" />
+          <Property Name="complydate" Type="DateTime" Precision="3" />
+          <Property Name="conticket" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="vcnumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="fleetservices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="doyouearn" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cdllicense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tt6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="recommend" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ywhynot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="addr" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="addr1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="C_state" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="noofdrivers" Type="Int32" />
+          <Property Name="addfb" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="healthclinicEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="contactform" EntityType="Self.contactform" />
+          <EntitySet Name="fleetservices" EntityType="Self.fleetservices" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="healthclinicModelStoreContainer" CdmEntityContainer="healthclinicEntities">
+          <EntitySetMapping Name="contactform">
+            <EntityTypeMapping TypeName="healthclinicModel.contactform">
+              <MappingFragment StoreEntitySet="contactform">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="C_type" ColumnName="_type" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="dlicense" ColumnName="dlicense" />
+                <ScalarProperty Name="tickethelp" ColumnName="tickethelp" />
+                <ScalarProperty Name="citationno" ColumnName="citationno" />
+                <ScalarProperty Name="citationdate" ColumnName="citationdate" />
+                <ScalarProperty Name="complydate" ColumnName="complydate" />
+                <ScalarProperty Name="conticket" ColumnName="conticket" />
+                <ScalarProperty Name="vcnumber" ColumnName="vcnumber" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="info" ColumnName="info" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fleetservices">
+            <EntityTypeMapping TypeName="healthclinicModel.fleetservices">
+              <MappingFragment StoreEntitySet="fleetservices">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="doyouearn" ColumnName="doyouearn" />
+                <ScalarProperty Name="cdllicense" ColumnName="cdllicense" />
+                <ScalarProperty Name="tt6" ColumnName="tt6" />
+                <ScalarProperty Name="recommend" ColumnName="recommend" />
+                <ScalarProperty Name="ywhynot" ColumnName="ywhynot" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="addr" ColumnName="addr" />
+                <ScalarProperty Name="addr1" ColumnName="addr1" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="C_state" ColumnName="_state" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="noofdrivers" ColumnName="noofdrivers" />
+                <ScalarProperty Name="addfb" ColumnName="addfb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
