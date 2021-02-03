@@ -1,15 +1,18 @@
 @font-face {
-    font-family: 'Roboto-ThinItalic';
-    src: url('../../../../fonts/Roboto-ThinItalic.ttf') format('truetype'), url('../../../../fonts/Roboto-Thin.ttf') format('truetype'), url('../../../../fonts/Roboto-Regular.ttf') format('truetype'), url('../../../../fonts/Roboto-MediumItalic.ttf') format('truetype'), url('../../../../fonts/Roboto-Medium.ttf') format('truetype'), url('../../../../fonts/Roboto-LightItalic.ttf') format('truetype'), url('../../../../fonts/Roboto-Light.ttf') format('truetype'), url('../../../../fonts/Roboto-Italic.ttf') format('truetype'), url('../../../../fonts/Roboto-BoldItalic.ttf') format('truetype'), url('../../../../fonts/Roboto-Bold.ttf') format('truetype'), url('../../../../fonts/Roboto-BlackItalic.ttf') format('truetype'), url('../../../../fonts/Roboto-Black.ttf') format('truetype');
+    font-family: 'BebasNeue-webfont';
+    src: url('../../../../fonts/BebasNeue-webfont.woff') format('woff');
 }
-
 @font-face {
     font-family: 'icons8db5';
-    src: url('../../../../fonts/icons8db5.woff') format('woff'), url('../../../../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../../../fonts/glyphicons-halflings-regular.svg') format('svg'), url('../../../../fonts/glyphicons-halflings-regular.eot') format('embedded-opentype'), url('../../../../fonts/BebasNeue-webfont.woff') format('woff');
+    src: url('../../../../fonts/icons8db5.woff') format('woff');
 }
 @font-face {
-    font-family: 'fa-brands-400';
-    src: url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.eot') format('embedded-opentype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.svg') format('svg'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.ttf') format('truetype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.woff') format('woff'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.woff2') format('woff2'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.eot') format('embedded-opentype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.svg') format('svg'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.ttf') format('truetype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.woff') format('woff'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.woff2') format('woff2'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.eot') format('embedded-opentype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.svg') format('svg'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.ttf') format('truetype'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.woff') format('woff'), url('../../../../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.woff2') format('woff2');
+    font-family: 'Roboto-Black';
+    src: url('../../../../fonts/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Helvetica Neu Bold';
+    src: url('../../../../fonts/helveticaneue/Helvetica Neu Bold.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeue BlackCond.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeue Light.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeue Medium.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeue Thin.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeue.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeueBd.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeueHv.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeueIt.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeueLt.ttf') format('truetype'), url('../../../../fonts/helveticaneue/HelveticaNeueMed.ttf') format('truetype');
 }
 [class^=icon-], [class*=" icon-"] {
     font-family: 'Icons' !important;

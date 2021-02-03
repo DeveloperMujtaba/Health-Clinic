@@ -214,8 +214,10 @@
     <Content Include="blog.html" />
     <Content Include="careers.html" />
     <Content Include="contact.html" />
+    <Content Include="dui.html" />
     <Content Include="espanol.html" />
     <Content Include="favicon.ico" />
+    <Content Include="hire-us-new.html" />
     <Content Include="index.html" />
     <Content Include="location.html" />
     <Content Include="login.html" />
@@ -2103,6 +2105,8 @@
     <Content Include="themes\cdn-cgi\apps\head\PsrBPxoVYTmK-w1p2uxT-iz-CFE.js" />
     <Content Include="themes\cdn-cgi\l\email-protection.html" />
     <Content Include="themes\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js" />
+    <Content Include="themes\fonts\helveticaneue\freefontsdownload.txt" />
+    <Content Include="themes\fonts\helveticaneue\helveticaneue.png" />
     <Content Include="themes\fonts\stylesheet.css" />
     <Content Include="themes\images\location-california.png" />
     <Content Include="themes\images\location-florida.png" />
@@ -4122,6 +4126,18 @@
     <Content Include="wp-content\themes\the-ticket-clinic\fonts\roboto\Roboto-Regular-webfont.woff" />
     <Content Include="wp-content\themes\the-ticket-clinic\fonts\roboto\Roboto-Regular-webfontd41d.eot" />
     <Content Include="Views\Home\Messg.cshtml" />
+    <Content Include="themes\fonts\helveticaneue\Helvetica Neu Bold.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeue BlackCond.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeue Light.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeue Medium.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeue Thin.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeue.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeueBd.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeueHv.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeueIt.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeueLt.ttf" />
+    <Content Include="themes\fonts\helveticaneue\HelveticaNeueMed.ttf" />
+    <Content Include="themes\fonts\helveticaneue\www.freefontsdownload.net.url" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202102011751338_InitialCreate.resx">
