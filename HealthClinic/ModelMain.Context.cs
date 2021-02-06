@@ -27,5 +27,7 @@ namespace HealthClinic
     
         public virtual DbSet<contactform> contactform { get; set; }
         public virtual DbSet<fleetservices> fleetservices { get; set; }
+        public virtual DbSet<citations> citations { get; set; }
+        public virtual DbSet<hireus> hireus { get; set; }
     }
 }

@@ -4,7 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="healthclinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="healthclinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="citations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="citationnumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="citationdate" Type="datetime" />
+          <Property Name="citationcountry" Type="nvarchar" MaxLength="500" />
+          <Property Name="citationcourt" Type="nvarchar" MaxLength="500" />
+          <Property Name="citationcomplydate" Type="datetime" />
+          <Property Name="citationvcn" Type="nvarchar" MaxLength="500" />
+          <Property Name="token" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="contactform">
           <Key>
             <PropertyRef Name="id" />
@@ -48,12 +61,35 @@
           <Property Name="noofdrivers" Type="int" />
           <Property Name="addfb" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="hireus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="firstname" Type="nvarchar" MaxLength="100" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="100" />
+          <Property Name="address" Type="nvarchar" MaxLength="1000" />
+          <Property Name="city" Type="nvarchar" MaxLength="100" />
+          <Property Name="state" Type="nvarchar" MaxLength="100" />
+          <Property Name="zipcode" Type="nvarchar" MaxLength="500" />
+          <Property Name="homephone" Type="nvarchar" MaxLength="500" />
+          <Property Name="placeofemp" Type="nvarchar" MaxLength="500" />
+          <Property Name="empphone" Type="nvarchar" MaxLength="500" />
+          <Property Name="email" Type="nvarchar" MaxLength="500" />
+          <Property Name="license" Type="nvarchar" MaxLength="500" />
+          <Property Name="dob" Type="datetime" />
+          <Property Name="preferedby" Type="nvarchar" MaxLength="500" />
+          <Property Name="country" Type="nvarchar" MaxLength="500" />
+          <Property Name="legalprb" Type="nvarchar" MaxLength="500" />
+          <Property Name="token" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="healthclinicModelStoreContainer">
+          <EntitySet Name="citations" EntityType="Self.citations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="contactform" EntityType="Self.contactform" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="fleetservices" EntityType="Self.fleetservices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hireus" EntityType="Self.hireus" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="healthclinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -103,7 +139,44 @@
         <EntityContainer Name="healthclinicEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="contactform" EntityType="Self.contactform" />
           <EntitySet Name="fleetservices" EntityType="Self.fleetservices" />
+          <EntitySet Name="citations" EntityType="healthclinicModel.citations" />
+          <EntitySet Name="hireus" EntityType="healthclinicModel.hireus" />
         </EntityContainer>
+        <EntityType Name="citations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="citationnumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="citationdate" Type="DateTime" Precision="3" />
+          <Property Name="citationcountry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="citationcourt" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="citationcomplydate" Type="DateTime" Precision="3" />
+          <Property Name="citationvcn" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="token" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="hireus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="zipcode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="homephone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="placeofemp" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="empphone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="license" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="dob" Type="DateTime" Precision="3" />
+          <Property Name="preferedby" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="legalprb" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="token" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -152,6 +225,43 @@
                 <ScalarProperty Name="company" ColumnName="company" />
                 <ScalarProperty Name="noofdrivers" ColumnName="noofdrivers" />
                 <ScalarProperty Name="addfb" ColumnName="addfb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="citations">
+            <EntityTypeMapping TypeName="healthclinicModel.citations">
+              <MappingFragment StoreEntitySet="citations">
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="citationvcn" ColumnName="citationvcn" />
+                <ScalarProperty Name="citationcomplydate" ColumnName="citationcomplydate" />
+                <ScalarProperty Name="citationcourt" ColumnName="citationcourt" />
+                <ScalarProperty Name="citationcountry" ColumnName="citationcountry" />
+                <ScalarProperty Name="citationdate" ColumnName="citationdate" />
+                <ScalarProperty Name="citationnumber" ColumnName="citationnumber" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hireus">
+            <EntityTypeMapping TypeName="healthclinicModel.hireus">
+              <MappingFragment StoreEntitySet="hireus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="legalprb" ColumnName="legalprb" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="preferedby" ColumnName="preferedby" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="license" ColumnName="license" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="empphone" ColumnName="empphone" />
+                <ScalarProperty Name="placeofemp" ColumnName="placeofemp" />
+                <ScalarProperty Name="homephone" ColumnName="homephone" />
+                <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

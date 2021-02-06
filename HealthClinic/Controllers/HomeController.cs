@@ -102,5 +102,100 @@ namespace HealthClinic.Controllers
             TempData["Message"] = "You submission has been saved, We'll contact you back within 3 business days!~/contact.html";
             return RedirectToAction("messg");
         }
+        [HttpPost]
+        public ActionResult HireUsNew(hireusm hu, Citations1 c1, Citations2 c2, Citations3 c3, Citations4 c4)
+        {
+            try
+            {
+                using (var context = new healthclinicEntities())
+                {
+                    string tok = DateTime.Now.ToString("yyyy-MM-dd-T-HH-mm-ss-fffffffK");
+                    hireus hiu = new hireus
+                    {
+                        firstname = hu.firstname,
+                        lastname = hu.lastname,
+                        address = hu.address,
+                        city = hu.city,
+                        state = hu.state,
+                        zipcode = hu.zipcode,
+                        homephone = hu.homephone,
+                        placeofemp = hu.placeofemp,
+                        empphone = hu.empphone,
+                        email = hu.email,
+                        license = hu.license,
+                        dob = hu.dob,
+                        preferedby = hu.preferedby,
+                        country = hu.country,
+                        legalprb = hu.legalprb,
+                        token = tok
+                    };
+                    context.hireus.Add(hiu);
+                    //context.SaveChanges();
+                    citations c = new citations
+                    {
+                        citationnumber = c1.citationnumber1,
+                        citationcomplydate = c1.citationcomplydate1,
+                        citationcountry = c1.citationcountry1,
+                        citationcourt = c1.citationcourt1,
+                        citationdate = c1.citationdate1,
+                        citationvcn = c1.citationvcn1,
+                        token = tok
+                    };
+                    context.citations.Add(c);
+                    // if has citation 2
+                    if (c2.citationnumber2 != null)
+                    {
+                        citations cc = new citations
+                        {
+                            citationnumber = c2.citationnumber2,
+                            citationcomplydate = c2.citationcomplydate2,
+                            citationcountry = c2.citationcountry2,
+                            citationcourt = c2.citationcourt2,
+                            citationdate = c2.citationdate2,
+                            citationvcn = c2.citationvcn2,
+                            token = tok
+                        };
+                        context.citations.Add(cc);
+                    }
+                    if (c3.citationnumber3 != null)
+                    {
+                        citations ccc = new citations
+                        {
+                            citationnumber = c3.citationnumber3,
+                            citationcomplydate = c3.citationcomplydate3,
+                            citationcountry = c3.citationcountry3,
+                            citationcourt = c3.citationcourt3,
+                            citationdate = c3.citationdate3,
+                            citationvcn = c3.citationvcn3,
+                            token = tok
+                        };
+                        context.citations.Add(ccc);
+                    }
+                    if (c3.citationnumber3 != null)
+                    {
+                        citations cccc = new citations
+                        {
+                            citationnumber = c4.citationnumber4,
+                            citationcomplydate = c4.citationcomplydate4,
+                            citationcountry = c4.citationcountry4,
+                            citationcourt = c4.citationcourt4,
+                            citationdate = c4.citationdate4,
+                            citationvcn = c4.citationvcn4,
+                            token = tok
+                        };
+                        context.citations.Add(cccc);
+                    }
+                    //finally place the transaction
+                    context.SaveChanges();
+                    TempData["Message"] = "Data has been saved!~/hire-us-new.html";
+                    return RedirectToAction("messg");
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = "There is problem with you submission, please try again: "+ex.Message+"!~/hire-us-new.html";
+                return RedirectToAction("messg");
+            }
+        }
     }
 }

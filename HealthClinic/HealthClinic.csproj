@@ -169,6 +169,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="citations.cs">
+      <DependentUpon>ModelMain.tt</DependentUpon>
+    </Compile>
     <Compile Include="contactform.cs">
       <DependentUpon>ModelMain.tt</DependentUpon>
     </Compile>
@@ -180,6 +183,9 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hireus.cs">
+      <DependentUpon>ModelMain.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202102011751338_InitialCreate.cs" />
     <Compile Include="Migrations\202102011751338_InitialCreate.Designer.cs">
@@ -202,8 +208,13 @@
       <DependentUpon>ModelMain.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Citations4.cs" />
+    <Compile Include="Models\Citations3.cs" />
+    <Compile Include="Models\Citations2.cs" />
+    <Compile Include="Models\Citations1.cs" />
     <Compile Include="Models\contact_form.cs" />
     <Compile Include="Models\driverfleet.cs" />
+    <Compile Include="Models\hireusm.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
